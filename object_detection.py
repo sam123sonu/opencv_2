@@ -3,7 +3,6 @@ import numpy as np
 
 def nothing(x):
     pass
-cap=cv2.VideoCapture(0)
 
 cv2.namedWindow("tracking")
 cv2.createTrackbar("LH","tracking",0,255,nothing)
@@ -15,8 +14,7 @@ cv2.createTrackbar("US","tracking",255,255,nothing)
 cv2.createTrackbar("UV","tracking",255,255,nothing)
 
 while True:
-    #frame=cv2.imread("smarties.png")
-    _,frame =cap.read()
+    frame=cv2.imread("smarties.png")
     hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
 
     l_h=cv2.getTrackbarPos("LH","tracking")
@@ -42,8 +40,7 @@ while True:
     if key==27:
         break
     if key==ord('s'):
-         cv2.imwrite("mask_VIDEO.jpg",mask)
-         cv2.imwrite("res_VIDEO.jpg",res)
-
-cap.release()
+         cv2.imwrite("mask.jpg",mask)
+         cv2.imwrite("res.jpg",res)
+        
 cv2.destroyAllWindows()
