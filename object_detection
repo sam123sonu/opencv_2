@@ -1,3 +1,5 @@
 # opencv_2
 object_detection.py shows how we can detect color in a perticular image...(mask.jpg,res.jpg are the output..)
 object_detection_video.py shows how we can detect color in a video.....(mask_video.jpg,res_video.jpg are the output)
+thresholding.py shows how we can threshold a image....(have given result of all the 8 type of thresholding method..)
+img_thresholding.py shows how we can do adaptive thresholding of a image......(result of 2 type of A.thresholding also given)
